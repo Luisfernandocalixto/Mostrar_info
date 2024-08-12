@@ -1,10 +1,49 @@
-body {
+* {
     padding: 0;
     margin: 0;
-    background: #beb8b8;
+    box-sizing: border-box;
+    color-scheme: dark;
+    font-size: 20px;
+
+    h1 {
+        font-size: 37px;
+    }
+}
+
+body {
+    background: #111827;
+
+}
+
+nav {
+    background: #253555;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        list-style: none;
+
+        li:hover {
+            color: #9db6dc;
+            transition: all ease-in-out .4s;
+            -webkit-transition: all ease-in-out .4s;
+            -moz-transition: all ease-in-out .4s;
+            -ms-transition: all ease-in-out .4s;
+            -o-transition: all ease-in-out .4s;
+            cursor: pointer;
+        }
+    }
+
 }
 
 header {
+    margin-top: 45px;
     text-align: center;
 }
 
@@ -37,16 +76,24 @@ a.active {
     justify-content: center;
 }
 
+.btn-color {
+    background: #35895f;
+    margin: 10px;
+    transition: all ease-in-out .2s;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    -ms-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+}
+
 .caja1 {
     border-radius: 8px;
-    background: #fff;
     margin-right: 50px;
 }
 
 .caja2 {
     border-radius: 8px;
     right: 0;
-    background: #bd9526;
     margin-left: 50px;
 
 }
@@ -58,27 +105,37 @@ a.active {
 
 .caja3 img {
     filter: drop-shadow(5px 5px 5px #534a4a);
+    width: 100%;
+    aspect-ratio: 707/308;
+}
+
+.space-top {
+    margin-top: 45px;
 }
 
 .caja4 {
     border-radius: 8px;
-    background: #fff123;
     margin-right: 50px;
 }
 
 .caja5 {
     border-radius: 8px;
-    background: #35895f;
     margin-left: 50px;
 }
 
 .contenido {
     font-family: 'Franklin Gothic Medium', sans-serif;
     text-align: justify;
-    max-width: 450px;
-    min-width: 200px;
+    /* max-width: 450px;
+    min-width: 200px; */
     margin-bottom: 10px;
     padding: 12px;
     border-radius: 5px;
     background: transparent;
+
+    h2{
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+
 }
