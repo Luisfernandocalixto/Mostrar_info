@@ -1,26 +1,26 @@
-import { rasgos, caza, evolucion, ultimosDatos } from "./datos.js"
+import { features, hunting, evolution, latestData } from "./data.js"
 
 
-//Enlaces
-let enlaces = document.querySelectorAll('a')
-let tituloDocumento = document.getElementById('titulo')
-let parrafoDocumento = document.getElementById('parrafo')
+// links
+let links = document.querySelectorAll('span')
+let titleDocument = document.getElementById('title')
+let paragraphDocument = document.getElementById('paragraph')
 
 
-//Agregar un elemento click por cada enlace
-enlaces.forEach(function (enlace) {
-    enlace.addEventListener('click', function () {
-        enlaces.forEach(function (enlace) {
-            enlace.classList.remove('active') //Remover la clase active del enlace
+//Add a element click for each link
+links.forEach(function (link) {
+    link.addEventListener('click', function () {
+        links.forEach(function (link) {
+            link.classList.remove('active') //Removing the class active of link
         });
 
         this.classList.add('active')
 
-        // Obtener los valores de la funcion obtener contenido
-        let contenido = obtenerContenido(this.textContent)
+        // Obtain the values of the function  getContent
+        let content = getContent(this.textContent)
 
-        tituloDocumento.innerHTML = contenido.titulo
-        parrafoDocumento.innerHTML = contenido.parrafo
+        titleDocument.innerHTML = content.title
+        paragraphDocument.innerHTML = content.paragraph
 
     });
 
@@ -28,12 +28,12 @@ enlaces.forEach(function (enlace) {
 });
 
 
-function obtenerContenido(enlace) {
-    let contenido = {
-        'Rasgos': rasgos,
-        'Técnica de Caza': caza,
-        'Evolución': evolucion,
-        'Ultimos datos': ultimosDatos,
-    }; return contenido[enlace];
+function getContent(link) {
+    let content = {
+        'Rasgos': features,
+        'Técnica de Caza': hunting,
+        'Evolución': evolution,
+        'Ultimos datos': latestData,
+    }; return content[link];
 
 }

@@ -5,14 +5,14 @@
     color-scheme: dark;
     font-size: 20px;
 
-    h1 {
-        font-size: 37px;
-    }
 }
 
 body {
     background: #111827;
 
+    & h1 {
+        font-size: 37px;
+    }
 }
 
 nav {
@@ -23,20 +23,23 @@ nav {
     height: 50px;
 
 
-    ul {
+    & ul {
         display: flex;
         justify-content: space-around;
         gap: 20px;
         list-style: none;
 
-        li:hover {
-            color: #9db6dc;
+        & li {
             transition: all ease-in-out .4s;
             -webkit-transition: all ease-in-out .4s;
             -moz-transition: all ease-in-out .4s;
             -ms-transition: all ease-in-out .4s;
             -o-transition: all ease-in-out .4s;
             cursor: pointer;
+        }
+
+        & li:hover {
+            color: #9db6dc;
         }
     }
 
@@ -59,25 +62,25 @@ header {
     align-content: space-between;
 }
 
-a {
+span {
     text-decoration: none;
     cursor: pointer;
     padding: 8px;
 }
 
-a.active {
+span.active {
     background-color: rgb(214, 83, 60);
     color: #fff;
 }
 
-.contenedor {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .btn-color {
-    background: #35895f;
+    background: #205C41;
     margin: 10px;
     transition: all ease-in-out .2s;
     -webkit-transition: all ease-in-out .2s;
@@ -86,24 +89,24 @@ a.active {
     -o-transition: all ease-in-out .2s;
 }
 
-.caja1 {
+.box1 {
     border-radius: 8px;
     margin-right: 50px;
 }
 
-.caja2 {
+.box2 {
     border-radius: 8px;
     right: 0;
     margin-left: 50px;
 
 }
 
-.caja3 {
+.box3 {
     overflow: hidden;
     justify-content: center;
 }
 
-.caja3 img {
+.box3 img {
     filter: drop-shadow(5px 5px 5px #534a4a);
     width: 100%;
     aspect-ratio: 707/308;
@@ -113,17 +116,17 @@ a.active {
     margin-top: 45px;
 }
 
-.caja4 {
+.box4 {
     border-radius: 8px;
     margin-right: 50px;
 }
 
-.caja5 {
+.box5 {
     border-radius: 8px;
     margin-left: 50px;
 }
 
-.contenido {
+.content {
     font-family: 'Franklin Gothic Medium', sans-serif;
     text-align: justify;
     margin-bottom: 10px;
@@ -131,7 +134,7 @@ a.active {
     border-radius: 5px;
     background: transparent;
 
-    h2{
+    h2 {
         font-size: 32px;
         margin-bottom: 5px;
     }
